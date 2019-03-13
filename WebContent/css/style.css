@@ -245,9 +245,9 @@ transition: .2s all linear;
 	text-align: left;
 	-webkit-transition: all 0.8s ease;
 	transition: all 0.8s ease;
-	font-size: 13px;
+	font-size: 17px;
 	line-height: 1.5em;
-	margin-bottom: 2.5em;
+	margin: 1em 2.5em 2.5em 2.5em;
 }
 .btn1 {
 	box-shadow: none;
