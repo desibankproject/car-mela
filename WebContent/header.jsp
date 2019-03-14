@@ -11,6 +11,7 @@
 				   <li class="has-sub"><a href="about.html"><span>About</span></a></li>
 				   <li><a href="gallery.jsp"><span>Gallery</span></a></li>
 				   <li class="last"><a href="contact.html"><span>Contact</span></a></li>
+				   <li class="last"><a href="login.jsp"><span>Login</span></a></li>
 				</ul>
             </div>
 		  </div>	
