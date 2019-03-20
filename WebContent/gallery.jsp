@@ -1,4 +1,4 @@
-
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE HTML>
 <html>
 
@@ -32,13 +32,28 @@
 					<div class="heading4">
 				 	<h2>Our Gallery</h2>
 				</div>
-				<div class="section group">
+				 
+			
+					 
+				<c:forEach items="${galleryDetails}" var="item" varStatus="row">
+				    <c:if test="${(row.count-1)%4==0}">
+				        	 <div class="section group">
+				    </c:if>
 					<div class="grid_1_of_4 images_1_of_4">
-						<a href="images/t-pic5.jpg" class="swipebox" title="Image Title"> <img src="images/pic5.jpg" alt=""><span class="zoom-icon"></span> </a>
-						<h4>Aenean nonummy hendrerit</h4>
-						<p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient.</p>
+						<a href="${item.image}" class="swipebox" title="Image Title"> <img src="${item.image}" alt=""><span class="zoom-icon"></span> </a>
+						<h4>${item.title}</h4>
+						<p>${item.description}</p>
 						<a href="#" class="link">Read More</a>
+						<c:if test="${sessionScope.username!=null}">
+						<a href="DeletePage?galid=${item.galId}"> <button type="button" class="btn btn-danger">Delete</button></a>
+					</c:if>
 					</div>
+					 <c:if test="row.count%4==0}">
+				    	 </div>
+				    </c:if>
+					</c:forEach>
+					
+					<div class="section group">
 					<div class="grid_1_of_4 images_1_of_4">
 						<a href="images/t-pic6.jpg" class="swipebox" title="Image Title"> <img src="images/pic6.jpg" alt=""><span class="zoom-icon"></span> </a>
 						<h4>Aenean nonummy hendrerit</h4>
@@ -53,6 +68,12 @@
 					</div>
 					<div class="grid_1_of_4 images_1_of_4">
 						<a href="images/t-pic8.jpg" class="swipebox" title="Image Title"> <img src="images/pic8.jpg" alt=""><span class="zoom-icon"></span> </a>
+						<h4>Aenean nonummy hendrerit</h4>
+						<p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient.</p>
+						<a href="#" class="link">Read More</a>
+					</div>
+					<div class="grid_1_of_4 images_1_of_4">
+						<a href="images/t-pic6.jpg" class="swipebox" title="Image Title"> <img src="images/pic6.jpg" alt=""><span class="zoom-icon"></span> </a>
 						<h4>Aenean nonummy hendrerit</h4>
 						<p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient.</p>
 						<a href="#" class="link">Read More</a>

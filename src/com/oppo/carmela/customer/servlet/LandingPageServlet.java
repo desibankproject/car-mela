@@ -11,8 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.oppo.carmela.admin.dao.entity.CarNewsDao;
+import com.oppo.carmela.admin.dao.entity.CarSliderDao;
 import com.oppo.carmela.admin.dao.entity.OurClubDao;
 import com.oppo.carmela.customer.dao.entity.CarNews;
+import com.oppo.carmela.customer.dao.entity.CarSlider;
 import com.oppo.carmela.customer.dao.entity.OurClub;
 
 /**
@@ -27,6 +29,9 @@ public class LandingPageServlet extends HttpServlet {
 		 
 		 CarNews carNews=CarNewsDao.findCarNews();
 		 request.setAttribute("carNews", carNews);
+		 
+		 List<CarSlider> sliders = CarSliderDao.findSlider();
+		 request.setAttribute("slider", sliders);
 		 
 		RequestDispatcher dispatcher=request.getRequestDispatcher("home.jsp");
 		dispatcher.forward(request, response);
