@@ -89,7 +89,7 @@ body{
 }
 #cssmenu > ul > li {
   float: left;
-  width: 24.9999%;
+#width: 24.9999%;
 }
 #cssmenu > ul > li > a {
   color: #000;
@@ -873,7 +873,7 @@ ul.last li span {
 	color:#DE5491;
 }
 .grid_1_of_4 p {
-	font-size: 20px;
+	font-size: 18px;
 	padding: 0.2em 0em 1.2em 0em;
 	color: white;
 	line-height: 1.6em;
